@@ -72,6 +72,7 @@ macro_rules! s {
         __item! {
             #[repr(C)]
             #[cfg_attr(feature = "extra_traits", derive(Debug, Eq, Hash, PartialEq))]
+            #[cfg_attr(feature = "frunk-generic", derive(frunk::Generic))]
             #[allow(deprecated)]
             $(#[$attr])*
             pub struct $i { $($field)* }

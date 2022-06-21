@@ -20,6 +20,8 @@ features = ["const-extern-fn", "extra_traits"]
 
 [dependencies]
 rustc-std-workspace-core = { version = "1.0.0", optional = true }
+frunk = { version = "0.4.0", optional = true }
+frunk_core = { version = "0.4.0", optional = true }
 
 [features]
 default = ["std"]
@@ -28,6 +30,7 @@ align = []
 rustc-dep-of-std = ['align', 'rustc-std-workspace-core']
 extra_traits = []
 const-extern-fn = []
+frunk-generic = ["frunk", "frunk_core"]
 # use_std is deprecated, use `std` instead
 use_std = [ 'std' ]
 

@@ -48,6 +48,13 @@ cfg_if! {
 }
 
 cfg_if! {
+    if #[cfg(feature = "frunk-generic")] {
+        extern crate frunk;
+        extern crate frunk_core;
+    }
+}
+
+cfg_if! {
     if #[cfg(libc_priv_mod_use)] {
         #[cfg(libc_core_cvoid)]
         #[allow(unused_imports)]
